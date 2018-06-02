@@ -32,8 +32,8 @@ public class AppUserDAO {
   
     public AppUser findAppUserByUserId(Long userId) {
         try {
-            String sql = "Select e from appuser e " //
-                    + " Where e.userid = :userId ";
+            String sql = "Select e from AppUser e " //
+                    + " Where e.userId = :userId ";
   
             Query query = entityManager.createQuery(sql, AppUser.class);
             query.setParameter("userId", userId);
@@ -46,8 +46,8 @@ public class AppUserDAO {
   
     public AppUser findAppUserByUserName(String userName) {
         try {
-            String sql = "Select e from appuser e " //
-                    + " Where e.username = :userName ";
+            String sql = "Select e from AppUser e " //
+                    + " Where e.userName = :userName ";
   
             Query query = entityManager.createQuery(sql, AppUser.class);
             query.setParameter("userName", userName);
@@ -60,7 +60,7 @@ public class AppUserDAO {
   
     public AppUser findByEmail(String email) {
         try {
-            String sql = "Select e from appuser e " //
+            String sql = "Select e from AppUser e " //
                     + " Where e.email = :email ";
   
             Query query = entityManager.createQuery(sql, AppUser.class);

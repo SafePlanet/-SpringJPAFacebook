@@ -21,8 +21,8 @@ public class UserConnectionDAO {
 
    public UserConnection findUserConnectionByUserProviderId(String userProviderId) {
        try {
-           String sql = "Select e from userconnection uc " //
-                   + " Where uc.userproviderid = :userProviderId ";
+           String sql = "Select e from UserConnection uc " //
+                   + " Where uc.userProviderId = :userProviderId ";
 
            Query query = entityManager.createQuery(sql, UserConnection.class);
            query.setParameter("userProviderId", userProviderId);
